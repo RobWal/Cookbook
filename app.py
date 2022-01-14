@@ -15,7 +15,7 @@ def index():
     cur = conn.cursor()
     cur.execute('SELECT 1', [])  # Query to check that the DB connected
     conn.close()
-    return 'Hello, world! This is a change I made to test the heroku/git push'
+    return 'Hello, world! This is a change I made to test the heroku/git push.'
 
 
 if __name__ == "__main__":
