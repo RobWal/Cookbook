@@ -7,8 +7,9 @@ import psycopg2
 
 from controllers.jaunt_controller import jaunt_controller
 from controllers.session_controller import session_controller
+from controllers.users_controller import users_controller
 
-DB_URL = os.environ.get("DATABASE_URL", "dbname=flask_app")
+
 SECRET_KEY = os.environ.get("SECRET_KEY", "password")
 
 app = Flask(__name__)
@@ -22,6 +23,7 @@ def home():
 
 app.register_blueprint(jaunt_controller)
 app.register_blueprint(session_controller)
+app.register_blueprint(users_controller)
 
 
 if __name__ == "__main__":

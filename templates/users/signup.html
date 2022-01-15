@@ -5,6 +5,11 @@
     <form action="/users" method="POST">
         <h2>Sign up</h2>
         <div>
+            {% if error %}
+            <div class="error">
+                {{error}}
+            </div>
+            {% endif %}
             <label for="name">Username</label>
             <input id="name" name="name" type="text" />
         </div>
