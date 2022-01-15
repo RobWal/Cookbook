@@ -1,9 +1,12 @@
 import email
-from ssl import _PasswordType
+# from ssl import _PasswordType
 from unicodedata import name
 from flask import Flask, redirect
 import os
 import psycopg2
+
+from controllers.jaunt_controller import jaunt_controller
+from controllers.session_controller import session_controller
 
 DB_URL = os.environ.get("DATABASE_URL", "dbname=flask_app")
 SECRET_KEY = os.environ.get("SECRET_KEY", "password")
@@ -13,13 +16,12 @@ app.config['SECRET_KEY'] = SECRET_KEY
 
 
 @app.route('/')
-@app.route('/menu')
-def index():
-    conn = psycopg2.connect(DB_URL)
-    cur = conn.cursor()
-    cur.execute('SELECT 1', [])  # Query to check that the DB connected
-    conn.close()
-    return 'Hello, world! This is a change I made to test the heroku/git push.'
+def home():
+    return redirect('/home')
+
+
+app.register_blueprint(jaunt_controller)
+app.register_blueprint(session_controller)
 
 
 if __name__ == "__main__":
