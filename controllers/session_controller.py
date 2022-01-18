@@ -12,6 +12,9 @@ def loginpage():
     return render_template('login.html', error=error)
 
 
+# TRYING TO FIGURE OUT HOW TO STAY LOGGED IN ONCE YOU REGISTER A NEW ACCOUNT
+
+# LOOK HERE
 @session_controller.route('/sessions/create', methods=["POST"])
 def login():
     email = request.form.get('email')

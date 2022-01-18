@@ -10,21 +10,35 @@
                 {{error}}
             </div>
             {% endif %}
-            <label for="name">Username</label>
-            <input id="name" name="name" type="text" />
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" />
         </div>
         <div>
             <label for="email">Email</label>
-            <input id="email" name="email" type="text" />
+            <input id="email" name="email" type="email" />
         </div>
         <div>
-            <label for="password">Password</label>
-            <input id="password" name="password" type="text" />
+            <label for="passwordOne">Password</label>
+            <input id="passwordOne" name="passwordOne" type="password" />
         </div>
         <div>
-            <button type="submit">Sign up</button>
+            <label for="passwordTwo">Confirm your password</label>
+            <input id="passwordTwo" name="passwordTwo" type="password" />
+        </div>
+        <div>
+            <p>Your password should be at least 
+                <span id="passwordCheckOne">one lower case letter</span>, 
+            <span id="passwordCheckTwo"> one upper case letter</span>, 
+            <span id="passwordCheckThree"> one special character (!@#$%^&*()<>?~)</span>, 
+            <span id="passwordCheckFour">one number</span> and 
+            <span id="passwordCheckFive">at least seven characters long</span>.
+            </p>
+            <progress max="100" value="0" id="strength"></progress>
+        </div>
+        <div>
+            <button type="submit" id="signUpButton">Sign up</button>
         </div>
     </form>
 </div>
-
+<script src="../static/javascript/signup.js"></script>
 {% endblock content %}

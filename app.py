@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
 # ~~MAKE ALL THESE NOT NULL~~ ~~ADD VALIDATION FOR ALL THESE FIELDS EG. PC/NPC, <7 & >0 FOR COUNTER/LUCK
 # UserID: unique key linked to user - foreign key used to join
-# Class: PC/NPC - enum
+# Class: PC/NPC - enum DO NOT NEED THIS, ALL ARE JUST CHARACTERS
 # Name: Example Name - Varchar 30
 # Player: - join users table, select username column
 # Rift counter: x/6 - smallint

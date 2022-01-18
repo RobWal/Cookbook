@@ -1,5 +1,5 @@
 from webbrowser import get
-from flask import Blueprint, request, redirect, render_template
+from flask import Blueprint, request, session, redirect, render_template
 from models.user import insert_user, get_user_by_email, check_existing_username
 
 users_controller = Blueprint(
@@ -14,13 +14,19 @@ def signup():
 
 @users_controller.route('/users', methods=['POST'])
 def create_user():
-    username = request.form.get('name')
+    username = request.form.get('username')
     if check_existing_username(username):
         return redirect("/signup?error=This+username+isn't+available")
     email = request.form.get('email')
     user = get_user_by_email(email)
     if user:
         return redirect("/signup?error=This+email+isn't+available")
-    password = request.form.get('password')
-    insert_user(username, email, password)
+    passwordOne = request.form.get('passwordOne')
+    passwordTwo = request.form.get('passwordTwo')
+    if passwordOne != passwordTwo:
+        return redirect("/signup?error=The+passwords+do+not+match")
+    insert_user(username, email, passwordOne)
+    user = get_user_by_email(email)
+    session['user_id'] = user['id']
+    session['user_name'] = user['username']
     return redirect('/')

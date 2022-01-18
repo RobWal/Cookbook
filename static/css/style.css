@@ -1,0 +1,46 @@
+#travesty_logo {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    width: 7vw;
+}
+
+header img {
+    display: block;
+    margin: 1vh auto 1.5vh auto;
+    width: 25vw;
+    border-bottom: 0.25vw solid rgb(0, 0, 0);
+    border-radius: 0.75vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 1.5vh 0;
+    font-size: 1vw;
+    border-bottom: 0.25vw solid rgb(0, 0, 0);
+    border-radius: 0.75vw;
+}
+
+nav div {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+progress {
+    width: 230px;
+}
+#signUpButton {
+    color: red;
+    pointer-events: none;
+}

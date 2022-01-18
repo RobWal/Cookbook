@@ -8,33 +8,62 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-        <header>
-            <h1>Welcome, Jaunters</h1>
-            <nav>
-                <div>
-                    <a href="/">Home</a>
-                </div>
-                {% if session.get('user_id') %}
-                <div>
-                    Welcome, {{session.get('user_name')}}
-                </div>
-                <div>
-                    <a href="/sessions/destroy">Logout</a>
-                </div>
-                {% else %}
-                <div>
-                    <a href="/login">Login</a>
-                </div>
-                <div>
-                    <a href="/signup">Sign up</a>
-                </div>
-                {% endif %}
-            </nav>
-        </header>
-        <main>
-            {%block content %}{% endblock content %}
-        </main>
-        <footer>
-        </footer>
-    </body>
+    <img id="travesty_logo" src="../static/images/travesty_games.png" alt="travesty_games_logo">
+    <header>
+        <a href="/"><img id="jaunt_header" src="../static/images/jaunt_logo.png" alt="Jaunt"></a>
+        <nav>
+            {% if session.get('user_id') %}
+            <div>
+                Welcome, jaunter {{session.get('user_name')}}!
+            </div>
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <div>
+                <a href="/create_character">Character Creator</a>
+            </div>
+            <div>
+                <a href="/learn_the_basics">Learn the basics</a>
+            </div>
+            <div>
+                <a href="/store">Store</a>
+            </div>
+            <div>
+                <a href="/sessions/profile_settings">Settings</a>
+            </div>
+            <div>
+                <a href="/sessions/destroy">Logout</a>
+            </div>
+            {% else %}
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <div>
+                <a href="/learn_the_basics">Learn the basics!</a>
+            </div>
+            <div>
+                <a href="/store">Store</a>
+            </div>
+            <div>
+                <a href="/login">Login</a>
+            </div>
+            <div>
+                <a href="/signup">Sign up</a>
+            </div>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% if session.get('user_id') %}
+        <!-- THIS IS WHERE CHARACTERS WILL GO, MAYBE ORDERED BY RECENTLY OPENED??? IDK -->
+        <p>This is where your characters will go</p>
+        {% else %}
+        {% endif %}
+        {%block content %}
+        {% endblock content %}
+    </main>
+    <footer>
+    </footer>
+    <script src="../static/javascript/main.js"></script>
+</body>
 </html>
