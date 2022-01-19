@@ -1,3 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if session.get('user_id') %}
+<section class="all-characters">
+    {% for character in character_items %}
+    <div class="character">
+        <div>
+            <h2>{{character['name']}}</h2>
+        </div>
+        <div>
+            {{character['intellect']}}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% else %}
+{% endif %}
 {% endblock content %}

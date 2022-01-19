@@ -30,46 +30,4 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-# User can create an account 'user'
-# Create character --> PC or NPC --> takes them through the creation process
-# Characters can be public or private (seen by others or not), alterable, default visibile
-# A basics page re Jaunt
-
-# 2 tables - users and characters, challenges maybe
-# signup/login
-# modifiable PC/NPC
-
-
-# ~~MAKE ALL THESE NOT NULL~~ ~~ADD VALIDATION FOR ALL THESE FIELDS EG. PC/NPC, <7 & >0 FOR COUNTER/LUCK
-# UserID: unique key linked to user - foreign key used to join
-# Class: PC/NPC - enum DO NOT NEED THIS, ALL ARE JUST CHARACTERS
-# Name: Example Name - Varchar 30
-# Player: - join users table, select username column
-# Rift counter: x/6 - smallint
-# Good luck: x/6 - smallint
-# Bad luck: x/6 - smallint
-# Resources(stuff): - smallint
-# Resources(lessons): - smallint
-# FacetOne: aspect of the PC - text
-# Facettwo: aspect of the PC - text
-# Body: - smallint
-# Body(resistance): - smallint
-# Body(coord): - smallint
-# Body(vigour): - smallint
-# Intellect: - smallint
-# Intellect(resistance): - smallint
-# Intellect(ingenuity): - smallint
-# Intellect(scrutiny): - smallint
-# Presence: - smallint
-# Presence(resistance): - smallint
-# Presence(allure): - smallint
-# Presence(guile): - smallint
-# Advantage: One time bonus - text
-# Advantage2: One time bonus - text
-# Utility: Small perk - text
-# Utility2: Small perk - text
-
-# ID - serial - primary key
-# username - varchar 30
-# email - text - unique constraint
-# password - varchar 255
+# IDEALLY HAVE MODEL:CONTROLLER, WHERE SESSION = LOGIN/LOGOUT, USERS = ANYTHING TO DO WITH THE USER / PROFILE, CHARACTER = ANYTHING TO DO WITH CHARACTER
