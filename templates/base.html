@@ -20,16 +20,16 @@
                 <a href="/">Home</a>
             </div>
             <div>
-                <a href="/create_character">Character Creator</a>
+                <a href="/create_page">Character Creator</a>
             </div>
             <div>
                 <a href="/learn_the_basics">Learn the basics</a>
             </div>
-            <div>
+            <!-- <div>
                 <a href="/store">Store</a>
-            </div>
+            </div> -->
             <div>
-                <a href="/sessions/profile_settings">Settings</a>
+                <a href="/profile_settings">Settings</a>
             </div>
             <div>
                 <a href="/sessions/destroy">Logout</a>
@@ -41,9 +41,9 @@
             <div>
                 <a href="/learn_the_basics">Learn the basics!</a>
             </div>
-            <div>
+            <!-- <div>
                 <a href="/store">Store</a>
-            </div>
+            </div> -->
             <div>
                 <a href="/login">Login</a>
             </div>
@@ -55,8 +55,6 @@
     </header>
     <main>
         {% if session.get('user_id') %}
-        <!-- THIS IS WHERE CHARACTERS WILL GO, MAYBE ORDERED BY RECENTLY OPENED??? IDK -->
-        <p>This is where your characters will go</p>
         {% else %}
         {% endif %}
         {%block content %}
