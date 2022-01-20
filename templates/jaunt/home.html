@@ -3,16 +3,41 @@
 {% if session.get('user_id') %}
 <section class="all-characters">
     {% for character in character_items %}
-    <div class="character">
-        <div>
-            <h2>{{character['name']}}</h2>
+        <div class="character_main_container">
+            <h3>{{character['name']}}</h3>
+            <div class="character_text_container">
+                <p>Facet 1: {{character['facet_one']}} Facet 2: {{character['facet_two']}}</p>
+                <p>Advantage 1: {{character['advantage_one']}} Advantage 2: {{character['advantage_two']}}</p>
+                <p>Utility 1: {{character['utility_one']}} Utility 2: {{character['utility_two']}}</p>
+            </div>
+                <p>Stuff: {{character['stuff']}} Lessons: {{character['lessons']}}</p>
+                <p>Good luck: {{character['good_luck']}} Bad luck: {{character['bad_luck']}}</p>
+            <div class="character_stat_container">
+                <p class="bold_tag">Body: {{character['body']}} Resistance: {{character['body_resistance']}}</p>
+                <p>Coordination: {{character['body_coordination']}} Vigour: {{character['body_vigour']}}</p>
+            </div>
+            <div class="character_stat_container">
+                <p class="bold_tag">Intellect: {{character['intellect']}} Resistance: {{character['intellect_resistance']}}</p>
+                <p>Ingenuity: {{character['intellect_ingenuity']}} Scrutiny: {{character['intellect_scrutiny']}}</p>
+            </div>
+            <div class="character_stat_container">
+                <p class="bold_tag">Presence: {{character['presence']}} Resistance: {{character['presence_resistance']}}</p>
+                <p>Allure: {{character['presence_allure']}} Guile: {{character['presence_guile']}}</p>
+            </div>
+            <div>
+                <a href="/{{character['id']}}/edit_character">Edit Character</a>
+            </div>
+            <div>
+                <form action="/{{character['id']}}/delete_character" method="POST">
+                    <button type="submit">
+                        Delete Character
+                    </button>
+                </form>
+            </div>
         </div>
-        <div>
-            {{character['intellect']}}
-        </div>
-    </div>
     {% endfor %}
 </section>
 {% else %}
 {% endif %}
 {% endblock content %}
+<!-- <script src="../static/javascript/home.js"></script> -->

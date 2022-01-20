@@ -3,7 +3,7 @@ import email
 from unicodedata import name
 from flask import Flask, redirect
 import os
-import psycopg2
+# import psycopg2
 
 from controllers.jaunt_controller import jaunt_controller
 from controllers.session_controller import session_controller

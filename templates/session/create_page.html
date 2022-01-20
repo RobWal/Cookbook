@@ -5,6 +5,7 @@
     {{error}}
 </div>
 {% endif %}
+{% if session.get('user_id') %}
     <form action="/create_character" method="POST">
         <h2>Create a character!</h2>
         <div>
@@ -107,4 +108,5 @@
             <button type="submit" id="chracterCreateButton">Create!</button>
         </div>
     </form>
+    {% endif %}
 {% endblock content %}

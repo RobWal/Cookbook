@@ -27,7 +27,7 @@ nav div {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: black;
 }
 
@@ -35,6 +35,13 @@ main {
     display: flex;
     justify-content: center;
     width: 80%;
+}
+
+.character_main_container {
+    margin: 1vh;
+    padding: 1vw;
+    border: 0.2vw solid black;
+    display: inline-block;
 }
 
 .error {
