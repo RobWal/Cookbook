@@ -25,7 +25,11 @@
                 <p>Allure: {{character['presence_allure']}} Guile: {{character['presence_guile']}}</p>
             </div>
             <div>
-                <a href="/{{character['id']}}/edit_character">Edit Character</a>
+                <form action="/{{character['id']}}/edit_character" method="POST">
+                    <button type="submit">
+                        Edit Character
+                    </button>
+                </form>
             </div>
             <div>
                 <form action="/{{character['id']}}/delete_character" method="POST">
