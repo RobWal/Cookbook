@@ -6,8 +6,9 @@
         </div>
     {% endif %}
     {% if session.get('user_id') %}
+    <div class="main_container">
         <form action="/create_character" method="POST" class = "character_form" id="flex_column">
-            <h2>Create a character!</h2>
+            <h2 class="centered">Create a character!</h2>
             <div>
                 <label for="name">Character name: </label>
                 <input id="name" name="name" type="text" maxlength="30" required/>
@@ -104,10 +105,11 @@
                 <label for="utility_two">Utility 2: </label>
                 <input id="utility_two" name="utility_two" type="text" maxlength="30"/>
             </div>
-            <div>
+            <div class="centered">
                 <button type="submit" id="chracterCreateButton">Create!</button>
             </div>
         </form>
+        </div>
     {% endif %}
     <script src="../static/javascript/create.js"></script>
 {% endblock content %}
