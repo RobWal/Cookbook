@@ -4,7 +4,8 @@
 
 -   Python
 -   Flask
--   Postgres
+-   Postgres Database
+-   Jinja Templates
 -   Javascript
 -   HTML
 -   CSS
