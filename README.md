@@ -2,7 +2,12 @@
 
 ## Technologies Used:
 
--   Python, Flask, Postgres, Javascript, HTML, CSS
+-   Python
+-   Flask
+-   Postgres
+-   Javascript
+-   HTML
+-   CSS
 
 ## Approach Taken:
 
