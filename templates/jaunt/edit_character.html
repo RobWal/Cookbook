@@ -7,109 +7,110 @@
 {% endif %}
 {% if session.get('user_id') %}
 {% for values in character_dictionary %}
-
-<form action="/complete_character_edit/{{ values['id'] }}" method="POST">
-    <h2>Edit your character!</h2>
+<div class="main_container">
+<form class="character_form" action="/complete_character_edit/{{ values['id'] }}" method="POST" id="flex_column">
+    <h2 class="centered">Edit your character!</h2>
     <div>
         <label for="name">Character name: </label>
-        <input id="name" name="name" type="text" maxlength="30" value="{{values['name']}}"/>
+        <input id="name" name="name" type="text" maxlength="30" value="{{values['name']}}" required/>
     </div>
     <div>
         <label for="stuff">Stuff: </label>
-        <input id="stuff" name="stuff" type="number" min="0" max="1000" value="{{values['stuff']}}"/>
+        <input id="stuff" name="stuff" type="number" min="0" max="1000" value="{{values['stuff']}}" required/>
     </div>
     <div>
         <label for="lessons">Lessons: </label>
-        <input id="lessons" name="lessons" type="number" min="0" max="15" value="{{values['lessons']}}"/>
+        <input id="lessons" name="lessons" type="number" min="0" max="15" value="{{values['lessons']}}" required/>
     </div>
     <div>
         <label for="good_luck">Good luck: </label>
-        <input id="good_luck" name="good_luck" type="number" min="0" max="6" value="{{values['good_luck']}}"/>
+        <input id="good_luck" name="good_luck" type="number" min="0" max="6" value="{{values['good_luck']}}" required/>
     </div>
     <div>
         <label for="bad_luck">Bad luck: </label>
-        <input id="bad_luck" name="bad_luck" type="number" min="0" max="6" value="{{values['bad_luck']}}"/>
+        <input id="bad_luck" name="bad_luck" type="number" min="0" max="6" value="{{values['bad_luck']}}" required/>
     </div>
     <div>
         <label for="rift_counter">Rift counter: </label>
-        <input id="rift_counter" name="rift_counter" type="number" min="0" max="6" value="{{values['rift_counter']}}"/>
+        <input id="rift_counter" name="rift_counter" type="number" min="0" max="6" value="{{values['rift_counter']}}" required/>
     </div>
     <div>
         <label for="body">Body: </label>
-        <input id="body" name="body" type="number" min="0" max="10" value="{{values['body']}}"/>
+        <input id="body" name="body" type="number" min="0" max="10" value="{{values['body']}}" required/>
     </div>
     <div>
         <label for="body_resistance">Body resistance: </label>
-        <input id="body_resistance" name="body_resistance" type="number" min="0" max="10" value="{{values['body_resistance']}}"/>
+        <input id="body_resistance" name="body_resistance" type="number" min="0" max="10" value="{{values['body_resistance']}}" required/>
     </div>
     <div>
         <label for="body_coordination">Body coordination: </label>
-        <input id="body_coordination" name="body_coordination" type="number" min="0" max="10" value="{{values['body_coordination']}}"/>
+        <input id="body_coordination" name="body_coordination" type="number" min="0" max="10" value="{{values['body_coordination']}}" required/>
     </div>
     <div>
         <label for="body_vigour">Body vigour: </label>
-        <input id="body_vigour" name="body_vigour" type="number" min="0" max="10" value="{{values['body_vigour']}}"/>
+        <input id="body_vigour" name="body_vigour" type="number" min="0" max="10" value="{{values['body_vigour']}}" required/>
     </div>
     <div>
         <label for="intellect">Intellect: </label>
-        <input id="intellect" name="intellect" type="number" min="0" max="10" value="{{values['intellect']}}"/>
+        <input id="intellect" name="intellect" type="number" min="0" max="10" value="{{values['intellect']}}" required/>
     </div>
     <div>
         <label for="intellect_resistance">Intellect resistance: </label>
-        <input id="intellect_resistance" name="intellect_resistance" type="number" min="0" max="10" value="{{values['intellect_resistance']}}"/>
+        <input id="intellect_resistance" name="intellect_resistance" type="number" min="0" max="10" value="{{values['intellect_resistance']}}" required/>
     </div>
     <div>
         <label for="intellect_ingenuity">Intellect ingenuity: </label>
-        <input id="intellect_ingenuity" name="intellect_ingenuity" type="number" min="0" max="10" value="{{values['intellect_ingenuity']}}"/>
+        <input id="intellect_ingenuity" name="intellect_ingenuity" type="number" min="0" max="10" value="{{values['intellect_ingenuity']}}" required/>
     </div>
     <div>
         <label for="intellect_scrutiny">Intellect scrutiny: </label>
-        <input id="intellect_scrutiny" name="intellect_scrutiny" type="number" min="0" max="10" value="{{values['intellect_scrutiny']}}"/>
+        <input id="intellect_scrutiny" name="intellect_scrutiny" type="number" min="0" max="10" value="{{values['intellect_scrutiny']}}" required/>
     </div>
     <div>
         <label for="presence">Presence: </label>
-        <input id="presence" name="presence" type="number" min="0" max="10" value="{{values['presence']}}"/>
+        <input id="presence" name="presence" type="number" min="0" max="10" value="{{values['presence']}}" required/>
     </div>
     <div>
         <label for="presence_resistance">Presence resistance: </label>
-        <input id="presence_resistance" name="presence_resistance" type="number" min="0" max="10" value="{{values['presence_resistance']}}"/>
+        <input id="presence_resistance" name="presence_resistance" type="number" min="0" max="10" value="{{values['presence_resistance']}}" required/>
     </div>
     <div>
         <label for="presence_allure">Presence allure: </label>
-        <input id="presence_allure" name="presence_allure" type="number" min="0" max="10" value="{{values['presence_allure']}}"/>
+        <input id="presence_allure" name="presence_allure" type="number" min="0" max="10" value="{{values['presence_allure']}}" required/>
     </div>
     <div>
         <label for="presence_guile">Presence guile: </label>
-        <input id="presence_guile" name="presence_guile" type="number" min="0" max="10" value="{{values['presence_guile']}}"/>
+        <input id="presence_guile" name="presence_guile" type="number" min="0" max="10" value="{{values['presence_guile']}}" required/>
     </div>
     <div>
         <label for="facet_one">Facet one: </label>
-        <input id="facet_one" name="facet_one" type="text" value="{{values['facet_one']}}"/>
+        <input id="facet_one" name="facet_one" type="text" value="{{values['facet_one']}}" maxlength="30"/>
     </div>
     <div>
         <label for="facet_two">Facet two: </label>
-        <input id="facet_two" name="facet_two" type="text" value="{{values['facet_two']}}"/>
+        <input id="facet_two" name="facet_two" type="text" value="{{values['facet_two']}}" maxlength="30"/>
     </div>
     <div>
         <label for="advantage_one">Advantage 1: </label>
-        <input id="advantage_one" name="advantage_one" type="text" value="{{values['advantage_one']}}"/>
+        <input id="advantage_one" name="advantage_one" type="text" value="{{values['advantage_one']}}" maxlength="30"/>
     </div>
     <div>
         <label for="advantage_two">Advantage 2: </label>
-        <input id="advantage_two" name="advantage_two" type="text" value="{{values['advantage_two']}}"/>
+        <input id="advantage_two" name="advantage_two" type="text" value="{{values['advantage_two']}}" maxlength="30"/>
     </div>
     <div>
         <label for="utility_one">Utility 1: </label>
-        <input id="utility_one" name="utility_one" type="text" value="{{values['utility_one']}}"/>
+        <input id="utility_one" name="utility_one" type="text" value="{{values['utility_one']}}" maxlength="30"/>
     </div>
     <div>
         <label for="utility_two">Utility 2: </label>
-        <input id="utility_two" name="utility_two" type="text" value="{{values['utility_two']}}"/>
+        <input id="utility_two" name="utility_two" type="text" value="{{values['utility_two']}}" maxlength="30"/>
     </div>
-    <div>
+    <div class="centered">
         <button type="submit" id="chracterCreateButton">Complete edit!</button>
     </div>
 </form>
+</div>
 {% endfor %}
 {% endif %}
 {% endblock content %}

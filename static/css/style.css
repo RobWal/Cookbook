@@ -1,25 +1,25 @@
 #travesty_logo {
     position: absolute;
-    bottom: 1vw;
-    right: 1vw;
-    width: 7vw;
+    bottom: 1vmin;
+    right: 1vmin;
+    width: 7vmin;
 }
 
 header img {
     display: block;
-    margin: 1vh auto 1.5vh auto;
-    width: 25vw;
-    border-bottom: 0.25vw solid rgb(0, 0, 0);
-    border-radius: 0.75vw;
+    margin: 1vmin auto 1.5vmin auto;
+    width: 25vmin;
+    border-bottom: 0.25vmin solid rgb(0, 0, 0);
+    border-radius: 0.75vmin;
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
-    padding: 0 0 1.5vh 0;
-    font-size: 1vw;
-    border-bottom: 0.25vw solid rgb(0, 0, 0);
-    border-radius: 0.75vw;
+    padding: 0 0 1.5vmin 0;
+    font-size: 1vmin;
+    border-bottom: 0.25vmin solid rgb(0, 0, 0);
+    border-radius: 0.75vmin;
 }
 
 nav div {
@@ -34,14 +34,59 @@ a {
 main {
     display: flex;
     justify-content: center;
-    width: 80%;
 }
 
-.character_main_container {
+.all_characters {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_container {
     margin: 1vh;
-    padding: 1vw;
-    border: 0.2vw solid black;
+    padding: 1vmin;
+    border: 0.2vmin solid black;
     display: inline-block;
+    font-size: 1vmin;
+    min-width: 15vmin;
+}
+
+.main_container button {
+    padding: 0.5vmin;
+    margin: 0 0 0.5vh 0;
+    border-radius: 0.5vmin;
+    background-color: rgba(116, 116, 116, 0.308);
+    border-color: rgb(255, 255, 255);
+    font-size: 1vmin;
+}
+
+.character_stat_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .character_text_container { */
+/* display: flex;
+    flex-direction: column; */
+/* justify-content: center; */
+/* } */
+
+.character_text_container p,
+form,
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
 }
 
 .error {
@@ -54,4 +99,15 @@ progress {
 #signUpButton {
     color: red;
     pointer-events: none;
+}
+
+.character_form {
+    min-width: 30vmin;
+}
+
+.character_form div {
+    margin: 0 0 1vmin 0;
+}
+.character_form input {
+    float: right;
 }

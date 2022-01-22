@@ -59,33 +59,3 @@ def complete_character_edit(id):
     complete_character_edit_database(id, name, stuff, lessons, good_luck, bad_luck, rift_counter, body, body_resistance, body_coordination, body_vigour, intellect, intellect_resistance,
                                      intellect_ingenuity, intellect_scrutiny, presence, presence_resistance, presence_allure, presence_guile, facet_one, facet_two, advantage_one, advantage_two, utility_one, utility_two)
     return redirect('/')
-
-
-# @food_controller.route('/foods/<id>', methods=["POST"])
-# def update(id):
-#     if not session.get('user_id'):
-#         return redirect('/login')
-#     name = request.form.get("name")
-#     price = request.form.get("price")
-#     description = request.form.get("description")
-#     image_url = request.form.get("image_url")
-#     update_food(id, name, price, description, image_url)
-#     return redirect('/')
-
-# @food_controller.route('/foods/<id>', methods=["POST"])
-# def update(id):
-#     if not session.get('user_id'):
-#         return redirect('/login')
-#     name = request.form.get("name")
-#     price = request.form.get("price")
-#     description = request.form.get("description")
-#     image_url = request.form.get("image_url")
-#     # UPDATE
-#     update_food(id, name, price, description, image_url)
-#     return redirect('/')
-# @food_controller.route('/foods/<id>/delete', methods=["POST"])
-# def delete(id):
-#     if not session.get('user_id'):
-#         return redirect('/login')
-#     delete_food(id)
-#     return redirect('/')

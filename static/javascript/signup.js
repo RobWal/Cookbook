@@ -22,12 +22,15 @@ passwordCheck = (firstPassword, secondPassword) => {
     if (firstPassword.match(/[A-Z]+/)) {
         strength += 1;
     }
-    if (firstPassword.match(/[!@#$%^&*()~<>?]+/)) {
+    if (firstPassword.match(/[!@#$%^&*()~<>\[\]\\\/?{}'";:,.=+|_-`]+/)) {
         strength += 1;
     }
     if (firstPassword.match(/[0-9]+/)) {
         strength += 1;
     }
+
+    [];
+
     if (firstPassword.length > 7) {
         strength += 1;
     }
