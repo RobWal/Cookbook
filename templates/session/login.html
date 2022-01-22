@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div className="signup-login">
-
-    <form action="/sessions/create" method="POST">
+    <form class="form_gap" action="/sessions/create" method="POST" >
         <h2>Login</h2>
         {% if error %}
         <div class="error">

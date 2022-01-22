@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-    {% if error %}
-        <div class="error">
-            {{error}}
-        </div>
-    {% endif %}
-    {% if session.get('user_id') %}
-    <div class="main_container">
-        <form action="/create_character" method="POST" class = "character_form" id="flex_column">
+{% if session.get('user_id') %}
+<div class="main_container">
+        {% if error %}
+            <div class="error">
+                {{error}}
+            </div>
+        {% endif %}
+        <form action="/create_character" method="POST" class = "character_form form_gap" id="flex_column">
             <h2 class="centered">Create a character!</h2>
             <div>
                 <label for="name">Character name: </label>

@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <div className="signup-login">
-        <form action="/users" method="POST">
+        <!-- <form class="flex_column form_gap" action="/users" method="POST"></form> -->
+        <form class="form_gap" action="/users" method="POST">
             <h2>Sign up</h2>
             <div>
                 {% if error %}
