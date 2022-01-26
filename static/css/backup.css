@@ -1,0 +1,121 @@
+#travesty_logo {
+    position: absolute;
+    top: 1vmin;
+    right: 1vmin;
+    width: 10vmin;
+}
+
+header img {
+    display: block;
+    margin: 1vmin auto 1.5vmin auto;
+    width: 25vmin;
+    border-bottom: 0.25vmin solid rgb(0, 0, 0);
+    border-radius: 0.75vmin;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 1.5vmin 0;
+    font-size: 1.5vmin;
+    border-bottom: 0.25vmin solid rgb(0, 0, 0);
+    border-radius: 0.75vmin;
+}
+
+nav div {
+    display: inline;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.all_characters {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_gap > div {
+    margin: 0.3vmin;
+}
+
+.main_container {
+    display: flex;
+    margin: 1vh;
+    padding: 1vmin;
+    border: 0.2vmin solid black;
+    display: inline-block;
+    font-size: 1.5vmin;
+    min-width: 15vmin;
+}
+
+.main_container button {
+    padding: 0.5vmin;
+    margin: 0 0 0.5vh 0;
+    border-radius: 0.5vmin;
+    background-color: rgba(116, 116, 116, 0.308);
+    border-color: rgb(255, 255, 255);
+    font-size: 1.5vmin;
+}
+
+.character_stat_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.character_text_container p,
+form,
+h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    padding-bottom: 1.5vh;
+}
+
+progress {
+    width: 230px;
+}
+#signUpButton {
+    color: red;
+    pointer-events: none;
+}
+
+.character_form {
+    min-width: 30vmin;
+}
+
+.character_form div {
+    margin: 0 0 1vmin 0;
+}
+.character_form input {
+    float: right;
+}
+
+.learn_the_basics p,
+h3 {
+    font-size: 1.5vmin;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1vmin 0 0 0;
+}

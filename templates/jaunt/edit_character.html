@@ -7,9 +7,9 @@
 {% endif %}
 {% if session.get('user_id') %}
 {% for values in character_dictionary %}
-<div class="main_container">
-<form class="character_form" action="/complete_character_edit/{{ values['id'] }}" method="POST" id="flex_column">
-    <h2 class="centered">Edit your character!</h2>
+<div class="main_container_row">
+<form action="/complete_character_edit/{{ values['id'] }}" method="POST">
+    <h3>Edit your character!</h3>
     <div>
         <label for="name">Character name: </label>
         <input id="name" name="name" type="text" maxlength="30" value="{{values['name']}}" required/>

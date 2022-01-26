@@ -13,7 +13,7 @@
         <a href="/"><img id="jaunt_header" src="../static/images/jaunt_logo.png" alt="Jaunt"></a>
         <nav>
             {% if session.get('user_id') %}
-            <div>
+            <div id="welcome_nav">
                 Welcome, jaunter {{session.get('user_name')}}!
             </div>
             <div>
@@ -51,7 +51,7 @@
         {% if session.get('user_id') %}
         {% else %}
         {% endif %}
-        {%block content %}
+        {% block content %}
         {% endblock content %}
     </main>
     <footer>

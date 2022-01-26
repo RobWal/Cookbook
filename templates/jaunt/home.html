@@ -1,69 +1,70 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if session.get('user_id') %}
-<section class="all-characters">
-    {% for character in character_items %}
-        <div class="main_container">
-            <div class="character_text_container">
-                <h3>{{character['name']}}</h3>
-                <p>Facet 1: {{character['facet_one']}}</p> 
-                <p>Facet 2: {{character['facet_two']}}</p>
-                <p>Advantage 1: {{character['advantage_one']}}</p>
-                <p>Advantage 2: {{character['advantage_two']}}</p>
-                <p>Utility 1: {{character['utility_one']}}</p>
-                <p>Utility 2: {{character['utility_two']}}</p>
+    <div class="main_container_row">
+        {% for character in character_items %}
+            <div class="character_container">
+                <div class="character_text_container">
+                    <h3>{{character['name']}}</h3>
+                    <p>Facet 1: {{character['facet_one']}}</p> 
+                    <p>Facet 2: {{character['facet_two']}}</p>
+                    <p>Advantage 1: {{character['advantage_one']}}</p>
+                    <p>Advantage 2: {{character['advantage_two']}}</p>
+                    <p>Utility 1: {{character['utility_one']}}</p>
+                    <p>Utility 2: {{character['utility_two']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Stuff: {{character['stuff']}}</p>
+                    <p>Lessons: {{character['lessons']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Good luck: {{character['good_luck']}}</p>
+                    <p>Bad luck: {{character['bad_luck']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Body: {{character['body']}}</p>
+                    <p>Resistance: {{character['body_resistance']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Coordination: {{character['body_coordination']}}</p>
+                    <p>Vigour: {{character['body_vigour']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Intellect: {{character['intellect']}}</p>
+                    <p>Resistance: {{character['intellect_resistance']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Ingenuity: {{character['intellect_ingenuity']}}</p><p>Scrutiny: {{character['intellect_scrutiny']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Presence: {{character['presence']}}</p>
+                    <p>Resistance: {{character['presence_resistance']}}</p>
+                </div>
+                <div class="character_stat_container">
+                    <p>Allure: {{character['presence_allure']}}</p>
+                    <p>Guile: {{character['presence_guile']}}</p>
+                </div>
+                
+                    <form action="/{{character['id']}}/edit_character" method="POST">
+                        <button type="submit">
+                            Edit Character
+                        </button>
+                    </form>
+                
+                    <form action="/{{character['id']}}/delete_character" method="POST">
+                        <button type="submit">
+                            Delete Character
+                        </button>
+                    </form>
+                
             </div>
-            <div class="character_stat_container">
-                <p>Stuff: {{character['stuff']}}</p>
-                <p>Lessons: {{character['lessons']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Good luck: {{character['good_luck']}}</p>
-                <p>Bad luck: {{character['bad_luck']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Body: {{character['body']}}</p>
-                <p>Resistance: {{character['body_resistance']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Coordination: {{character['body_coordination']}}</p>
-                <p>Vigour: {{character['body_vigour']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Intellect: {{character['intellect']}}</p>
-                <p>Resistance: {{character['intellect_resistance']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Ingenuity: {{character['intellect_ingenuity']}}</p><p>Scrutiny: {{character['intellect_scrutiny']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Presence: {{character['presence']}}</p>
-                <p>Resistance: {{character['presence_resistance']}}</p>
-            </div>
-            <div class="character_stat_container">
-                <p>Allure: {{character['presence_allure']}}</p>
-                <p>Guile: {{character['presence_guile']}}</p>
-            </div>
-            <div>
-                <form action="/{{character['id']}}/edit_character" method="POST">
-                    <button type="submit">
-                        Edit Character
-                    </button>
-                </form>
-            </div>
-            <div>
-                <form action="/{{character['id']}}/delete_character" method="POST">
-                    <button type="submit">
-                        Delete Character
-                    </button>
-                </form>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</section>
 {% else %}
-<h2>Log in to access features!</h2>
+<div class="main_container_column">
+    <h3>Log in to access features!</h3>
+    <p>By creating an account and logging in, you'll be able to create and edit characters to play in every reality!</p>
+</div>
 {% endif %}
 {% endblock content %}
 <!-- <script src="../static/javascript/home.js"></script> -->

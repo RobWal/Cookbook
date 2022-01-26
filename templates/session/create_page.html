@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% if session.get('user_id') %}
-<div class="main_container">
+    <div class="main_container_row">
         {% if error %}
             <div class="error">
                 {{error}}
@@ -109,7 +109,7 @@
                 <button type="submit" id="chracterCreateButton">Create!</button>
             </div>
         </form>
-        </div>
-    {% endif %}
-    <script src="../static/javascript/create.js"></script>
+    </div>
+{% endif %}
+<script src="../static/javascript/create.js"></script>
 {% endblock content %}

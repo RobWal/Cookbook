@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <div className="signup-login">
+    <div class="main_container_column">
         <!-- <form class="flex_column form_gap" action="/users" method="POST"></form> -->
         <form class="form_gap" action="/users" method="POST">
-            <h2>Sign up</h2>
+            <h3>Sign up</h3>
             <div>
                 {% if error %}
                 <div class="error">
@@ -28,7 +28,7 @@
             <div>
                 <p>Your password should contain each of the following: 
                     <span id="passwordCheckOne">a lower case letter</span>, 
-                <span id="passwordCheckTwo"> an upper case letter</span>, 
+                <span id="passwordCheckTwo"> an upper case letter</span>,<br>
                 <span id="passwordCheckThree"> a special character</span>, 
                 <span id="passwordCheckFour"> a number</span> and 
                 <span id="passwordCheckFive">be least seven characters long</span>.
