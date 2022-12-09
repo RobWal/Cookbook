@@ -35,9 +35,6 @@ passwordCheck = (firstPassword, secondPassword) => {
         strength += 1;
     }
     strengthBar.value = strength * 20;
-    console.log(
-        `PasswordOne: ${firstPassword} and passwordTwo: ${secondPassword}`
-    );
     if (strength === 0) {
         signUpButton.style.color = 'red';
         strengthBar.value = 0;

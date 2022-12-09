@@ -70,7 +70,6 @@ def create_character():
     insert_character(user_id, name, stuff, lessons, good_luck, bad_luck, rift_counter, body, body_resistance, body_coordination, body_vigour, intellect, intellect_resistance,
                      intellect_ingenuity, intellect_scrutiny, presence, presence_resistance, presence_allure, presence_guile, facet_one, facet_two, advantage_one, advantage_two, utility_one, utility_two)
     error = request.args.get('error', "Character created successfully!")
-    # return render_template('create_page.html', error=error)
     return redirect('/')
 
 
